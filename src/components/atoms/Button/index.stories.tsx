@@ -15,3 +15,16 @@ export const Default: Story = {
         label: '추가',
     },
 };
+
+export const RedButton: Story = {
+    args: {
+        label: '삭제',
+    },
+};
+
+export const BlueButton: Story = {
+    args: {
+        label: '추가',
+        color: '#304FFE',
+    },
+};

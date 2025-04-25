@@ -1,9 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { BrowserRouter } from 'react-router-dom';
 import { Header } from '.';
 
 const meta = {
     title: 'Organisms/Header',
     component: Header,
+    decorators: [
+        (Story) => (
+            <BrowserRouter>
+                <Story />
+            </BrowserRouter>
+        ),
+    ], 
+    parameters: {
+        backgrounds: {
+            default: 'Header background color',
+            values: [{ name: 'Header background color', value: '#304ffe' }],
+        },
+    },
 } satisfies Meta<typeof Header>;
 
 export default meta;

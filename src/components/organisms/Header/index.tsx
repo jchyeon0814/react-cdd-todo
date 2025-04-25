@@ -1,6 +1,11 @@
 import styled from '@emotion/styled';
+import { AppTitle } from 'components/atoms/AppTitle';
 
 export const Header = () => {
-    return <div>Header</div>;
+    return (
+        <div>
+            <AppTitle label="test"/>
+        </div>
+    );
 };
 

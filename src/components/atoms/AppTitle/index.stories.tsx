@@ -28,6 +28,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {
-        label: '할 일 목록 앱',
+        label: '할일목록앱',
     }
 };

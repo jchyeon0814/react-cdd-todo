@@ -8,6 +8,10 @@ const Container = styled(Link)`
     cursor: pointer;
 `;
 
-export const AppTitle = () => {
-    return <Container to="/">할 일 목록 앱</Container>;
+interface Props {
+    readonly label: string;
+}
+
+export const AppTitle = ({ label }: Props) => {
+    return <Container to="/">{label}</Container>;
 };

@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
+
+import { TodoListContext } from 'contexts/TodoList';
 
 import { Input } from 'components/atoms/Input';
 import { Button } from 'components/atoms/Button';
@@ -13,9 +15,13 @@ const Container = styled.div`
 
 export const InputTodo = () => {
     const [todo, setTodo] = useState('');
+    const { onAdd } = useContext(TodoListContext);
     const navigate = useNavigate();
 
-    const onAdd = () => {
+    const onAddTodo = () => {
+        if(todo === '') return;
+
+        onAdd(todo);
         setTodo('');
         navigate('/');
     };
@@ -23,7 +29,7 @@ export const InputTodo = () => {
     return (
         <Container>
             <Input value={todo} onChange={setTodo} />
-            <Button label="추가" color="#304FFE" onClick={onAdd} />
+            <Button label="추가" color="#304FFE" onClick={onAddTodo} />
         </Container>
     );
 };

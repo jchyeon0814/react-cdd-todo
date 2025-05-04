@@ -9,13 +9,6 @@ const meta = {
     args: {
         onDelete: fn(),
     },
-    decorators: [
-        (Story) => (
-            <BrowserRouter>
-                <Story />
-            </BrowserRouter>
-        ),
-    ],
 } satisfies Meta<typeof TodoList>;
 
 export default meta;

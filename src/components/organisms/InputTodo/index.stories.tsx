@@ -5,13 +5,6 @@ import { BrowserRouter } from 'react-router-dom';
 const meta = {
     title: 'Organisms/InputTodo',
     component: InputTodo,
-    decorators: [
-        (Story) => (
-            <BrowserRouter>
-                <Story />
-            </BrowserRouter>
-        ),
-    ],
 } satisfies Meta<typeof InputTodo>;
 
 export default meta;

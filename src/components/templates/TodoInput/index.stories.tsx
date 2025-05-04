@@ -5,13 +5,6 @@ import { BrowserRouter } from 'react-router-dom';
 const meta = {
     title: 'Templates/TodoInput',
     component: TodoInput,
-    decorators: [
-        (Story) => (
-            <BrowserRouter>
-                <Story />
-            </BrowserRouter>
-        )
-    ]
 } satisfies Meta<typeof TodoInput>;
 
 export default meta;

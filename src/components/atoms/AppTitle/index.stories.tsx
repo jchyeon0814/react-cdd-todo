@@ -4,13 +4,6 @@ import { AppTitle } from '.';
 
 const meta = {
     title: "atoms/AppTitle",
-    decorators: [
-        (Story) => (
-            <BrowserRouter>
-                <Story />
-            </BrowserRouter>
-        ),
-    ], 
     parameters: {
         backgrounds: {
             default: 'Header background color',

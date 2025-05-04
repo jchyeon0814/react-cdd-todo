@@ -5,13 +5,6 @@ import { Header } from '.';
 const meta = {
     title: 'Organisms/Header',
     component: Header,
-    decorators: [
-        (Story) => (
-            <BrowserRouter>
-                <Story />
-            </BrowserRouter>
-        ),
-    ], 
     parameters: {
         backgrounds: {
             default: 'Header background color',

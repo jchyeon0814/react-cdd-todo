@@ -1,7 +1,12 @@
+import { useContext } from 'react';
+import { TodoListContext } from 'contexts/TodoList';
+
 import { TodoList } from 'components/templates/TodoList';
 
-export const TodoListPage = () => {
-    const todoList = ['리액트 공부하기', 'CDD 공부하기', '할 일 목록 앱 개발기'];
 
-    return <TodoList todoList={todoList} />;
+
+export const TodoListPage = () => {
+    const { todoList, onDelete } = useContext(TodoListContext);
+
+    return <TodoList todoList={todoList} onDelete={onDelete} />;
 };

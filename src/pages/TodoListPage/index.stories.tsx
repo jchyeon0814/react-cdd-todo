@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
+import { TodoListContextProvider } from 'contexts/TodoList';
+
 import { TodoListPage } from '.';
 
 const meta = {
@@ -8,13 +10,6 @@ const meta = {
     args: {
 
     },
-    decorators: [
-        (Story) => (
-            <BrowserRouter>
-                <Story />
-            </BrowserRouter>
-        ),
-    ],
 } satisfies Meta<typeof TodoListPage>;
 
 export default meta;

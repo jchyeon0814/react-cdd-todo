@@ -3,15 +3,13 @@ import { TodoInput } from '.';
 import { BrowserRouter } from 'react-router-dom';
 
 const meta = {
-    title: 'Templates/TodoInput',
-    component: TodoInput,
+  title: 'Templates/TodoInput',
+  component: TodoInput,
 } satisfies Meta<typeof TodoInput>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-    args: {
-
-    },
+  args: {},
 };

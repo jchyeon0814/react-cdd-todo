@@ -5,18 +5,14 @@ import { TodoListContextProvider } from 'contexts/TodoList';
 import { TodoListPage } from '.';
 
 const meta = {
-    title: 'pages/TodoListPage',
-    component: TodoListPage,
-    args: {
-
-    },
+  title: 'pages/TodoListPage',
+  component: TodoListPage,
+  args: {},
 } satisfies Meta<typeof TodoListPage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-    args: {
-        
-    }
-}
+  args: {},
+};
